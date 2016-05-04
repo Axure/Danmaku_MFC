@@ -210,13 +210,15 @@ BOOL CDanmaku_MFCDlg::CanExit()
 
 void CDanmaku_MFCDlg::OnBnClickedButton1()
 {
-	// TODO: 在此添加控件通知处理程序代码
-	auto textDialog = new Danmaku_TextDlg(this);
-
-	BOOL ret = textDialog->Create(IDD_TEXT, this);
-	if (ret == FALSE)
+	if (textDlg == nullptr)
 	{
-		AfxMessageBox(_T("Text creation failed!"));
+		textDlg = std::make_shared<Danmaku_TextDlg>();
+		BOOL ret = textDlg->Create(IDD_TEXT, this);
+		if (ret == FALSE)
+		{
+			AfxMessageBox(_T("Text creation failed!"));
+		}
 	}
-	textDialog->ShowWindow(SW_SHOW);
+	textDlg->ShowWindow(SW_SHOW);
+
 }

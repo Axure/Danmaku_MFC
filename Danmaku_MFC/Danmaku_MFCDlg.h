@@ -3,7 +3,8 @@
 //
 
 #pragma once
-
+#include <memory>
+#include "Danmaku_TextDlg.h"
 class CDanmaku_MFCDlgAutoProxy;
 
 
@@ -45,4 +46,6 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedButton1();
+private:
+	std::shared_ptr<Danmaku_TextDlg> textDlg = nullptr;
 };

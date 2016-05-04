@@ -33,6 +33,7 @@ BEGIN_MESSAGE_MAP(Danmaku_TextDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_TIMER()
 	ON_WM_ERASEBKGND()
+	ON_WM_CLOSE()
 END_MESSAGE_MAP()
 
 
@@ -112,4 +113,12 @@ BOOL Danmaku_TextDlg::OnEraseBkgnd(CDC* pDC)
 	// TODO: 在此添加消息处理程序代码和/或调用默认值
 
 	return 1;
+}
+
+
+void Danmaku_TextDlg::OnClose()
+{
+	// TODO: 在此添加消息处理程序代码和/或调用默认值
+	ShowWindow(SW_HIDE);
+	CDialogEx::OnClose();
 }

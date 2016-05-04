@@ -31,4 +31,5 @@ public:
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
 	virtual BOOL OnInitDialog();
 	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
+	afx_msg void OnClose();
 };
