@@ -20,4 +20,15 @@ protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV Ö§³Ö
 
 	DECLARE_MESSAGE_MAP()
+
+private:
+	ULONG_PTR   g_gdiPlusToken = NULL;
+	UINT_PTR oneSecTimer;
+	CTime currentTime;
+	CStringW currentTimeString;
+public:
+	afx_msg void OnPaint();
+	afx_msg void OnTimer(UINT_PTR nIDEvent);
+	virtual BOOL OnInitDialog();
+	afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 };
