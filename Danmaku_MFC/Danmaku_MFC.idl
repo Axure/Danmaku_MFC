@@ -1,0 +1,29 @@
+// Danmaku_MFC.idl : Danmaku_MFC.exe 的类型库源
+
+// 此文件将由 MIDL 编译器处理以产生
+// 类型库(Danmaku_MFC.tlb)。
+
+[ uuid(99142FF7-2BAA-4FC8-83B8-E9D66843BB52), version(1.0) ]
+library Danmaku_MFC
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	//  CDanmaku_MFCDoc 的主调度接口
+	
+	[ uuid(DEC95DB0-BF9E-427B-AED1-B6F8FE53C7EA) ]
+	dispinterface IDanmaku_MFC
+	{
+		properties:
+			
+		methods:
+	};
+
+	//  CDanmaku_MFCDoc 的类信息
+	
+	[ uuid(24BFBDB1-947C-4D4F-9297-3D0A2E715887) ]
+	coclass Danmaku_MFC
+	{
+		[default] dispinterface IDanmaku_MFC;
+	};
+};
