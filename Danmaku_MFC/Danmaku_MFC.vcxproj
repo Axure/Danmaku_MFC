@@ -203,6 +203,7 @@
   <ItemGroup>
     <ClInclude Include="Danmaku_MFC.h" />
     <ClInclude Include="Danmaku_MFCDlg.h" />
+    <ClInclude Include="Danmaku_TextDlg.h" />
     <ClInclude Include="DlgProxy.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="stdafx.h" />
@@ -211,6 +212,7 @@
   <ItemGroup>
     <ClCompile Include="Danmaku_MFC.cpp" />
     <ClCompile Include="Danmaku_MFCDlg.cpp" />
+    <ClCompile Include="Danmaku_TextDlg.cpp" />
     <ClCompile Include="DlgProxy.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -235,4 +237,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Danmaku_MFC.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

@@ -8,6 +8,8 @@
 #include "DlgProxy.h"
 #include "afxdialogex.h"
 
+#include "Danmaku_TextDlg.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -77,6 +79,7 @@ BEGIN_MESSAGE_MAP(CDanmaku_MFCDlg, CDialogEx)
 	ON_WM_CLOSE()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BUTTON1, &CDanmaku_MFCDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
 
 
@@ -203,3 +206,17 @@ BOOL CDanmaku_MFCDlg::CanExit()
 	return TRUE;
 }
 
+
+
+void CDanmaku_MFCDlg::OnBnClickedButton1()
+{
+	// TODO: 在此添加控件通知处理程序代码
+	auto textDialog = new Danmaku_TextDlg(this);
+
+	BOOL ret = textDialog->Create(IDD_TEXT, this);
+	if (ret == FALSE)
+	{
+		AfxMessageBox(_T("Text creation failed!"));
+	}
+	textDialog->ShowWindow(SW_SHOW);
+}
